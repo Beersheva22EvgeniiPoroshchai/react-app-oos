@@ -160,7 +160,7 @@ const Products: React.FC = () => {
         if (JSON.stringify(product.current) != JSON.stringify(prod)) {
             title.current = "Update Product object?";
             product.current = prod;
-            content.current = `You are going update employee with id ${prod.id}`;
+            content.current = `You are going update product with id ${prod.id}`;
             confirmFn.current = actualUpdate;
             setOpenConfirm(true);
         }

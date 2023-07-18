@@ -68,7 +68,7 @@ const ProductsCopy: React.FC = () => {
             
           </Container>
         </Box>
-        <Container sx={{ py: 8 }} maxWidth="md">
+        <Container  maxWidth="md">
           {/* End hero unit */}
           <Grid container spacing={4}>
             {goods.map((good) => (

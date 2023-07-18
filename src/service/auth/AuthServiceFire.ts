@@ -27,11 +27,10 @@ export default class AuthServiceFire implements AuthService {
     async login(loginData: LoginData): Promise<UserData> {
         let userData: UserData = null;
         try {
-            const userAuth = !loginData.password? 
-             await signInWithPopup(this.auth, mapProviders.get(loginData.email)!) :
-            await signInWithEmailAndPassword(this.auth, loginData.email,
-                 loginData.password);
-            userData = {email: userAuth.user.email as string,
+            const userAuth = !loginData.password ? 
+            await signInWithPopup(this.auth, mapProviders.get(loginData.email)!) :
+            await signInWithEmailAndPassword(this.auth, loginData.email, loginData.password);
+              userData = {id: userAuth.user.uid, email: userAuth.user.email as string,
                  role: await this.isAdmin(userAuth.user.uid) ? 'admin' : 'user'}     
                 
         } catch (error: any) {

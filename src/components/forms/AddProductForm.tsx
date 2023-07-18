@@ -80,6 +80,8 @@ export const AddProductForm: React.FC<Props> = ({ submitFn, productUpdated }) =>
           prodCopy.image = linkOnImg;
           setFilePath(linkOnImg);
           setProduct(prodCopy);
+          
+          
         }
       }
 
@@ -92,11 +94,11 @@ export const AddProductForm: React.FC<Props> = ({ submitFn, productUpdated }) =>
 
 
     async function onSubmitFn(event: any) {
-        event.preventDefault();
+       event.preventDefault();
        product.image = filePath;
-       setFilePath(product.image)
-        const res = await submitFn(product);
-        res.status == "success" && event.target.reset();
+      // setFilePath(product.image)
+       const res = await submitFn(product);
+       res.status == "success" && event.target.reset();
     }
 
 

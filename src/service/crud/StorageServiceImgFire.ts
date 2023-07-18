@@ -1,7 +1,7 @@
 import { StorageReference, getDownloadURL, getStorage, ref, uploadBytes } from "firebase/storage";
-import StorageService from "./StorageService";
+import StorageService from "./StorageServiceImg";
 import { FirestoreError } from "firebase/firestore";
-import {getErrorMessage} from "../crud/ProductServiceFire"
+import {getErrorMessage} from "./ProductServiceFire"
 
 
 export default class StorageServiceFire implements StorageService {
