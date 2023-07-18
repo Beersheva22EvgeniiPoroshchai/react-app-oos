@@ -1,0 +1,204 @@
+[
+    {
+
+        "id": 1,
+        "name": "Vase for dried flowers",
+        "price": "49",
+        "description": "A small and neat handmade vase. This pretty vase is suitable for dry flowers. It can also be used for one small fresh flower. The neat vase is made with simple special tools",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/652379/4009542148/il_794xN.4009542148_9eq9.jpg",
+        "leftInStock": 4
+    },
+
+     {
+
+        "id": 2,
+        "name": "The goddess of fertility. Trypillian culture",
+        "price": "59",
+        "description": "One of the beautiful cultures of ancient times is the Trypillia culture. Our ancestors believed in different gods and sought power and spirituality in various figures and amulets. One of the most famous amulet figures of Trypillia culture is the amulet goddess of fertility. The various patterns on the figure are handmade by the master. Each line and pattern on the figure has its meaning.",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/566c9e/4891957864/il_794xN.4891957864_6ngz.jpg",
+        "leftInStock": 2
+    },
+
+
+    {
+
+        "id": 3,
+        "name": "Ceramic clay wall painting with the handmade flower of life",
+        "price": "89",
+        "description": "Enhance your living space with this exquisite ceramic clay wall painting featuring a meticulously handcrafted flower of life design. This unique clay picture showcases the beauty of ceramic artistry, with intricate details and vibrant colors that captivate the eye.",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/11965f/5052462391/il_794xN.5052462391_sqvl.jpg",
+        "leftInStock": 3
+    },
+    {
+
+        "id": 4,
+        "name": "A ceramic rhinoceros",
+        "price": "109",
+        "description": "Introducing our exquisite handmade ceramic rhinoceros figurine, a captivating piece crafted with utmost care by a master clay modeler. This remarkable sculpture showcases the majestic rhinoceros, with its giant horn elegantly depicted in a minimalist style.",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/2263e6/4985944860/il_794xN.4985944860_87km.jpg",
+        "leftInStock": 1
+    },
+
+    {
+
+        "id": 5,
+        "name": "Owl gift figurine",
+        "price": "139",
+        "description": "Gift statuette of an owl brown, handmade clay bird sculpture. The owl is made entirely of natural clay. The figure is quite heavy and very strong. First I formed the silhouette of the owl figure, then using special tools I outlined the face of the wings and made an overlay of some elements. After that, the product is dried and placed in a muffle kiln, where it is fired at high temperatures.",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/9d1893/4515155460/il_794xN.4515155460_kh70.jpg",
+        "leftInStock": 2
+    },
+
+
+    {
+
+        "id": 6,
+        "name": "Ukrainian art ceramic plate",
+        "price": "129",
+        "description": "Ukrainian ceramic art in the form of a plate on the wall. This plate symbolizes Ukraine. The plate depicts sunflowers that symbolize the Ukrainian fertile land. In the middle of the plate is the emblem of the Ukrainian people.",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/17ded4/4539223867/il_794xN.4539223867_546e.jpg",
+        "leftInStock": 4
+    },
+
+    {
+
+        "id": 7,
+        "name": "Ceramic vase with a natural clay lid",
+        "price": "129",
+        "description": "Ceramic vase with a lid. Vase jug made of natural clay painted with patterns of flowers. The product is made in the traditional Ukrainian style. Refers to the classic Ukrainian ceramics. The vase is very strong. Ceramics was fired in a muffle kiln at high temperatures",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/c6b122/4514078129/il_794xN.4514078129_jt6g.jpg",
+        "leftInStock": 2
+    },
+
+
+
+     {
+
+        "id": 8,
+        "name": "Ceramic horse figurine small size",
+        "price": "49",
+        "description": "Introducing the enchanting Ceramic horse figurine, small in size yet brimming with cultural significance. This captivating masterpiece is meticulously painted with exquisite flower patterns, showcasing the rich heritage of traditional Ukrainian craftsmanship. Each piece is a unique whistle, adding an element of whimsy to its inherent beauty. Handcrafted with love, this small horse figurine embodies the artistry and charm of Ukraine, making it a delightful addition to any collection or a thoughtful gift. Experience the allure of Ukrainian traditions with this one-of-a-kind treasure",
+        "category": "Whistle",
+        "image": "https://i.etsystatic.com/25821990/r/il/ce8aa5/4973194483/il_794xN.4973194483_e6cr.jpg",
+        "leftInStock": 2
+    },
+
+    {
+
+        "id": 9,
+        "name": "Small ceramic statuette whistle horse",
+        "price": "49",
+        "description": "Ceramic whistle horse made of clay. This traditional Ukrainian toy whistle originated in a small village in the center of Ukraine, in a town called Oposhnya. Whistles were made in different shapes, sizes and kinds. Ceramic whistles were in the form of a variety of animals. These whistles had their own peculiar whistle. This is probably how real pottery whistles",
+        "category": "Whistle",
+        "image": "https://i.etsystatic.com/25821990/r/il/9dbe6e/4455328807/il_794xN.4455328807_mgs1.jpg",
+        "leftInStock": 3
+    },
+
+    {
+
+        "id": 10,
+        "name": "Whistle - deer with Ukrainian painting",
+        "price": "69",
+        "description": "One of the types of traditional ceramics is a toy - a whistle. It is a great gift for both children and adults. According to ancient beliefs such whistles were used to ward off evil spirits. Sculptors made whistles in the form of different animals, most often it is a horse, deer, goat, cockerel, wild boar. Also for painting they used traditional paints - engobes",
+        "category": "Whistle",
+        "image": "https://i.etsystatic.com/25821990/r/il/8e6683/4461317270/il_794xN.4461317270_l0pt.jpg",
+        "leftInStock": 4
+    },
+
+    {
+
+        "id": 11,
+        "name": "Ceramic whistle in the form of a deer, Ukrainian traditional toy",
+        "price": "89",
+        "description": "Whistles toys were created by Ukrainian ceramics masters. At first, whistles were made exclusively for children, but then these various figures became very popular and joined the ranks of traditional products of Ukrainian ceramics. Whistles were made in the form of deer, bulls, horses, cockerels, fish and all kinds of animals.",
+        "category": "Whistle",
+        "image": "https://i.etsystatic.com/25821990/r/il/cfb484/4368387484/il_794xN.4368387484_6drl.jpg",
+        "leftInStock": 5
+    },
+
+    {
+
+        "id": 12,
+        "name": "Ancient jug with natural clay",
+        "price": "89",
+        "description": "A jug in the old Ukrainian style, painted with floral patterns. The original name of this product is 'Pleskanets'. This jug was used on holidays. In these vessels were poured various infusions of local herbs or berries that grow in the garden. Tinctures in the jugs were alcoholic and non-alcoholic. A jug with thick ceramic walls. It will hold cold or heat well.",
+        "category": "Jugs/Pitchers",
+        "image": "https://i.etsystatic.com/25821990/r/il/43379a/4484000870/il_794xN.4484000870_czqy.jpg",
+        "leftInStock": 2
+    },
+    {
+
+        "id": 13,
+        "name": "Ceramic vase for home decorated with flowers and fish",
+        "price": "89",
+        "description": "Ceramic jug with a lid. This jug or vase belongs to the classic Ukrainian products made of natural clay. The original name of the product is 'Pleskanets'. On this vase I have painted for you a fish with its tail in floral patterns. This particular style of painting is from a small town in Ukraine called Oposhnya. This style of drawing on ceramics was taught me by my grandmother.",
+        "category": "Jugs/Pitchers",
+        "image": "https://i.etsystatic.com/25821990/r/il/a2c655/4463620910/il_794xN.4463620910_fapq.jpg",
+        "leftInStock": 3
+    },
+    {
+
+        "id": 14,
+        "name": "Classic handmade ceramic jug in the Ukrainian style of natural clay",
+        "price": "89",
+        "description": "Classic ceramic jug made of natural clay. This clay is extracted from the earth and is originally of gray color. But after the product is fired in a muffle kiln at high temperatures, the jug acquires a pleasant brown color. I painted interesting flower patterns on the jug. This style of painting is called 'opishnian painting'.",
+        "category": "Jugs/Pitchers",
+        "image": "https://i.etsystatic.com/25821990/r/il/c2147c/4499421063/il_794xN.4499421063_bdqw.jpg",
+        "leftInStock": 1
+    },
+
+    {
+
+        "id": 15,
+        "name": "Ceramic pitcher vase blue ",
+        "price": "89",
+        "description": "Ceramic vase pot for dry flowers. A unique vase in the Ukrainian style painted in the ''opishnian'' style. The original name of this product is 'Pleskanets' This traditional Ukrainian vase is from the small town of 'Oposhnya' in Poltava region. The master painted fishes and flower patterns on this jug. This vase can also be used for any kind of drinks. The jug will look great as a piece of interior in the kitchen or in the bedroom. This unique vase and its repetition is impossible",
+        "category": "Jugs/Pitchers",
+        "image": "https://i.etsystatic.com/25821990/r/il/3099fe/4418755339/il_794xN.4418755339_oouf.jpg",
+        "leftInStock": 2
+    },
+
+    {
+
+        "id": 16,
+        "name": "Jug vase. Minimalist clay pitcher",
+        "price": "89",
+        "description": "Working with clay calms the soul. Everyone in childhood sculpted something out of plasticine, and it was great. A master who works on a potter's wheel gets a storm of emotions and pleasure after the work done. These emotions that he experiences are reflected in his product. We can say that each product is alive, because a part of the master's soul is embedded there.",
+        "category": "Jugs/Pitchers",
+        "image": "https://i.etsystatic.com/25821990/r/il/4f368b/3910276274/il_794xN.3910276274_ae7f.jpg",
+        "leftInStock": 4
+    },
+
+    {
+
+        "id": 17,
+        "name": "Ceramic jug for milk or dairy products",
+        "price": "89",
+        "description": "Ceramic jug of natural clay is made in the traditional Ukrainian style. This jug has a classic shape. I painted this jug with special paints. Do not worry these paints are not toxic. Painted with paints the pitcher is sent into a muffle furnace where is burning at high temperatures. After the muffle furnace, the jug becomes very strong and has a glossy effect inside and outside the product.",
+        "category": "Jugs/Pitchers",
+        "image": "https://i.etsystatic.com/25821990/r/il/e01f0d/4422472764/il_794xN.4422472764_cfxk.jpg",
+        "leftInStock": 4
+    },
+
+    {
+
+        "id": 18,
+        "name": "Set with two Ukrainian cups",
+        "price": "89",
+        "description": "Two interesting ceramic cups. Excellent cups for hot drinks. I would like to note that these cups are great to keep warm, as they are made from eco-friendly clay. The walls of the cups are thick enough so your hot drink will keep warm for a long time.",
+        "category": "Home Decor",
+        "image": "https://i.etsystatic.com/25821990/r/il/197632/3833402760/il_794xN.3833402760_444b.jpg",
+        "leftInStock": 5
+    }
+
+
+
+
+]

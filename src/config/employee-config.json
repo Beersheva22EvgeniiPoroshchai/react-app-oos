@@ -1,0 +1,11 @@
+{
+    
+    "minPrice": 7000,
+    "maxPrice": 50000,
+   
+    "maxYear": 2003,
+    "minYear": 1950,
+    "departments": [
+        "QA", "Audit", "Accounting", "Development", "Management"
+    ]
+}

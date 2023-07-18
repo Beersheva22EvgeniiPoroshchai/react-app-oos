@@ -1,0 +1,21 @@
+{
+    "always": [
+    {"to": "/products", "label": "Products","order":1},
+    {"to": "/productscopy", "label": "Products Copy","order":1}
+],
+    "authenticated": [
+    ],
+     "admin": [
+     {"to": "/employees/add", "label": "Add Product", "order":2},{"to": "/", "label": "Products Table", "order":2},
+     {"to": "/ordersmanagment", "label": "Orders Managment", "order": 4},
+     {"to": "/signout", "label": "Sign Out","order":10}
+    ],
+     "noadmin": [
+        
+            {"to": "/cart", "label": "Shopping Cart","order":2},
+            {"to": "/myorders", "label": "My Orders","order":3},
+            {"to": "/aboutus", "label": "About Us", "order": 4},
+            {"to": "/signout", "label": "Sign Out","order":10}
+            ],
+     "noauthenticated": [{"to": "/signin", "label": "Sign In", "order": 3}, {"to": "/aboutus", "label": "About Us", "order": 2}]
+}
