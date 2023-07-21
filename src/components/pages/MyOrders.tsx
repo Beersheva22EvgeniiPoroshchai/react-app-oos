@@ -1,11 +1,8 @@
 import { ThemeProvider } from "@emotion/react";
-import { createTheme, CssBaseline, Box, Container, Typography, TableContainer, Paper, Table, TableHead, TableRow, TableBody, TableCell, styled, tableCellClasses, Button } from "@mui/material";
+import { createTheme, CssBaseline, Box, Container, Typography, TableContainer, Paper, Table, TableHead, TableRow, TableBody, TableCell, styled, tableCellClasses } from "@mui/material";
 import { useSelectorOrders, useSelectorProducts } from "../hooks/hooks";
 import { useSelectorAuth } from "../../redux/store";
 import { Timestamp } from "firebase/firestore";
-
-import { orderService } from "../../config/service-config";
-import Order from "../../model/Order";
 import { useState } from "react";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
@@ -32,37 +29,14 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 
 
 const defaultTheme = createTheme();
-const OdersManagment: React.FC = () => {
+const MyOders: React.FC = () => {
     
+    const goods = useSelectorProducts();
     const orders = useSelectorOrders();
-    const [disabledConfBut, setDisabledConfBut] = useState(false);
-    
-    
+    const userData = useSelectorAuth();
 
-    function getOrderByIdUser() {
-        let foundOrder: Order = orders.find(ord => ord.status === 'ordered')!;
-        return foundOrder;
-      }  
-
-     
-
-
-    async function changeOrderstatus(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
-        const even = event.currentTarget.getAttribute('key');
-
-        const but = event.currentTarget;
-        but.setAttribute('hiden', 'true')
-
-
-        let foundOrder = getOrderByIdUser();
-        foundOrder.status = 'delivered';
-        await orderService.updateOrder(foundOrder);
-        setDisabledConfBut(true);
-       
-
-    }
-
-
+   
+  
     return (
         <ThemeProvider theme={defaultTheme}>
           <CssBaseline />
@@ -87,7 +61,7 @@ const OdersManagment: React.FC = () => {
                 >
                   <div className="shopTitle">
                 <h1>
-                    Orders Managment
+                    My Orders
                 </h1>
               </div>
                 </Typography>
@@ -105,11 +79,10 @@ const OdersManagment: React.FC = () => {
             <StyledTableCell align="left" sx={{width: 1000}}>Products</StyledTableCell>
             <StyledTableCell align="center">Total Price</StyledTableCell>
             <StyledTableCell align="center">Orders status</StyledTableCell>
-            <StyledTableCell align="center">Confirm order status</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-        {orders.filter(ord=> ord.status === 'ordered' || ord.status === 'delivered')?.map(order => (
+        {orders.filter(ord=>ord.idUser === userData!.id && ord.status === 'ordered' || ord.status === 'delivered')?.map(order => (
             <StyledTableRow key={order.id}>
               <StyledTableCell component="th" scope="row">{+order.id}</StyledTableCell>
               
@@ -137,9 +110,6 @@ const OdersManagment: React.FC = () => {
               }</StyledTableCell>
               <StyledTableCell align="center">{order.products.reduce((a,b)=>a + b.goods.price*b.amount, 0)}</StyledTableCell>
               <StyledTableCell align="center">{order.status}</StyledTableCell>
-              <StyledTableCell>
-                <Button key={order.id} className="but-conf" onClick={(event)=>changeOrderstatus(event)} disabled={disabledConfBut}>Confirm</Button>
-                 </StyledTableCell>
             </StyledTableRow>
 
 
@@ -156,7 +126,5 @@ const OdersManagment: React.FC = () => {
 }
 
 
-export default OdersManagment;
-
-
+export default MyOders;
 

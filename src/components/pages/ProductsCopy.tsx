@@ -18,10 +18,13 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { useSelectorProducts } from "../hooks/hooks";
+import { useDispatchCode, useSelectorOrders, useSelectorProducts } from "../hooks/hooks";
 import { useSelectorAuth } from "../../redux/store";
+import Order from "../../model/Order";
+import InputResult from "../../model/InputResult";
+import { orderService } from "../../config/service-config";
+import Good from "../../model/Good";
 
 
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -31,6 +34,59 @@ const ProductsCopy: React.FC = () => {
   
   const goods = useSelectorProducts();
   const userData = useSelectorAuth();
+  const orders = useSelectorOrders();
+
+  
+
+
+   let successMessage: string = '';
+   let errorMessage = '';
+   const dispatch = useDispatchCode();
+
+
+
+  async function addToCartFn(event: React.MouseEvent<HTMLButtonElement, MouseEvent>, addedGood: Good) {
+    
+    const res: InputResult = {status: 'success', message: ''}
+    try {
+       let goodForSaving: Order | undefined;
+    if (userData) {
+      let foundOrder = orders.find(ord=>ord.idUser === userData.id && ord.status === 'preOrdered');
+      if (!foundOrder) {
+          const newOrder: Order = {
+            idUser: userData.id,
+            products: [{ goods: addedGood, amount: 1}],
+            status: "preOrdered",
+            orderTime: new Date()
+          }
+          goodForSaving = newOrder;
+          const copyObj: Order = JSON.parse(JSON.stringify(goodForSaving));
+          await orderService.addOrder(copyObj!);
+          successMessage = `your order with id: ${goodForSaving?.id} has been created`
+
+      } else {
+        const foundGood = foundOrder.products.find(prod=>prod.goods.id === addedGood.id)
+          if (foundGood) {
+            foundGood.amount++;
+          } else{
+            foundOrder.products.push({goods: addedGood, amount: 1})
+          }
+          goodForSaving = foundOrder;
+          await orderService.updateOrder(goodForSaving!);
+          successMessage = `your order with id: ${goodForSaving?.id} has been updated`
+     }
+      
+   
+    }
+
+    } catch (error: any) {
+      errorMessage = error;
+      dispatch(errorMessage, successMessage);
+    }
+   
+    
+  }
+  
 
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -100,8 +156,8 @@ const ProductsCopy: React.FC = () => {
                   </CardContent>
                   { userData && userData.role=="user" && 
                     <CardActions>
-                    <Button size="small">Add to cart</Button>
-                    <Button size="small">Buy now</Button>
+                    <Button size="small" onClick={(event)=>addToCartFn(event, good)}>Add to shopping cart</Button>
+                    
                   </CardActions> }
                   
                   
@@ -131,32 +187,8 @@ const ProductsCopy: React.FC = () => {
   );
 }
 
-//     const ProductsCopy: React.FC = () => {
-
-//     return (
-//         <div className="shop">
-//           <div className="shopTitle">
-//             <h1>
-//                 Clay Art UA Shop 🪘⚱️🏺
-//             </h1>
-//           </div>
-
-//           <Box
-//         className="products"
-//         sx={{
-//           display: 'grid',
-//           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-//           gap: '20vw',
-//           padding: '20px',
-//         }}
-//       >
-//         {goodConf.map((product) => (
-//         <Product data={product} />
-//         ))}
-//       </Box>
-//         </div>
-//       );
-
-// }
 
 export default ProductsCopy;
+
+
+

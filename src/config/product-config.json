@@ -1,9 +1,6 @@
 {
-    
     "minPrice": 20,
     "maxPrice": 500,
-   
-    
     "category": [
         "Home Decor", "Whistle", "Jugs/Pitchers"
     ]

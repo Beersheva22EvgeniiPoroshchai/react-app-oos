@@ -15,7 +15,7 @@ export default class AuthServiceFire implements AuthService {
     getAvailableProvider(): { providerName: string; providerIconUrl: string; }[] {
         return [
         {providerName: 'GOOGLE', providerIconUrl: "https://img.icons8.com/color/2x/google-logo.png"},
-        {providerName: 'TWITTER', providerIconUrl: "https://www.transparentpng.com/thumb/twitter/twitter-bird-logo-pictures-0.png"}
+        {providerName: 'FACEBOOK', providerIconUrl: "https://img.icons8.com/?size=512&id=118497&format=png"}
     ]
     }
     private auth = getAuth(appFireBase);

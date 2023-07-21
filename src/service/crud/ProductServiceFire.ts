@@ -38,8 +38,6 @@ export default class EmployeesServiceFire implements EmployeesService {
 
     async addProduct(prod: Good): Promise<Good> {
 
-
-
         const id: string = await this.getId();
         const product = convertProduct(prod, id);
         const docRef = this.getDocRef(id);

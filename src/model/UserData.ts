@@ -1,6 +1,7 @@
 type UserData = {
-    id?: string;
+    id?: any;
     email: string;
     role: string;
+    address?: string;
 } | null
 export default UserData;

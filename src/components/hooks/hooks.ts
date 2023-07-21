@@ -4,8 +4,9 @@ import { codeActions } from "../../redux/slices/codeSlice";
 import { useEffect, useState } from "react";
 
 import { Subscription } from "rxjs";
-import { productsService } from "../../config/service-config";
+import { orderService, productsService } from "../../config/service-config";
 import Good from "../../model/Good";
+import Order from "../../model/Order";
 
 export function useDispatchCode() {
     const dispatch = useDispatch();
@@ -25,6 +26,8 @@ export function useDispatchCode() {
         dispatch(codeActions.set({ code, message: message || successMessage }))
     }
 }
+
+
 export function useSelectorProducts() {
     const dispatch = useDispatchCode();
     const [products, setProducts] = useState<Good[]>([]);
@@ -47,3 +50,28 @@ export function useSelectorProducts() {
     }, []);
     return products;
 }
+
+
+export function useSelectorOrders() {
+    const dispatch = useDispatchCode();
+    const [orders, setOrders] = useState<Order[]>([]);
+    useEffect(() => {
+        const subscription: Subscription = orderService.getAllOrders()
+            .subscribe({
+                next(orderArray: Order[] | string) {
+                    let errorMessage: string = '';
+                    if (typeof orderArray === 'string') {
+                        errorMessage = orderArray;
+                    } else {
+                        setOrders(orderArray);
+                    }
+                    dispatch(errorMessage, '');
+                 }
+            });
+        return () => subscription.unsubscribe();
+    }, []);
+    return orders;
+}
+
+
+

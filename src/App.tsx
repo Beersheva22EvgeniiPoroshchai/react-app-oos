@@ -27,6 +27,7 @@ import AboutUs from "./components/pages/AboutUs";
 import ShoppingCart from "./components/pages/ShoppingCart";
 import OrdersManagment from "./components/pages/OrdersManagment";
 import ProductsCopy from "./components/pages/ProductsCopy";
+import MyOrders from "./components/pages/MyOrders";
 
 const {always, authenticated, admin, noadmin, noauthenticated} = routesConfig;
 type RouteTypeOrder = RouteType & {order?: number}
@@ -52,7 +53,7 @@ function getRoutes(userData: UserData): RouteType[] {
   });
   if (userData) {
     res[res.length - 1].label = userData.email;
-  }
+    }
   return res
 }
 const App: React.FC = () => {
@@ -92,6 +93,7 @@ const App: React.FC = () => {
         <Route path="aboutus" element={<AboutUs/>}/>
         <Route path="cart" element={<ShoppingCart/>}/>
         <Route path="ordersmanagment" element={<OrdersManagment/>}/>
+        <Route path="myorders" element={<MyOrders/>}/>
 
         <Route path="/*" element={<NotFound/>}/>
     </Route>

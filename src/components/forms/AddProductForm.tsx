@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { FormControl, Grid, TextField, InputLabel, Select, Box, MenuItem, Button, FormLabel, RadioGroup, FormControlLabel, Radio, FormHelperText, Snackbar, Alert, Typography } from '@mui/material';
 
-import employeeConfig from "../../config/employee-config.json"
+
 import InputResult from "../../model/InputResult";
 import Good from "../../model/Good"
 import productConfig from "../../config/product-config.json"
@@ -111,10 +111,9 @@ export const AddProductForm: React.FC<Props> = ({ submitFn, productUpdated }) =>
             <Grid container spacing={3} justifyContent="center">
 
                 <Grid item xs={12} >
-                    <Typography className="header-form"
-                        style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', fontFamily: "" }}
+                    <Typography className="shopTitle"
+                       
                         variant="h6"
-                        id="tableTitle"
                         component="div"
                         fontSize={25}
                     >
