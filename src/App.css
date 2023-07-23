@@ -101,7 +101,7 @@
   }
 
   body {
-    /* background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%);  */
+    /* background-image: linear-gradient(to top, #c79081 0%, #dfa579 100%); */
     width: 90%;
     margin: 30px auto;
   }
@@ -209,5 +209,10 @@
     background-color: rgb(19, 19, 19);
   color: white;
   cursor: pointer;
+}
+
+
+.introduce {
+  color: #6a5140
 }
 

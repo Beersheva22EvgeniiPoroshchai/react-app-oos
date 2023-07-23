@@ -21,12 +21,10 @@ import { authService } from "./config/service-config";
 import { Alert, Snackbar } from "@mui/material";
 import { codeActions } from "./redux/slices/codeSlice";
 
-import process from "process";
-import Products from "./components/pages/Products";
 import AboutUs from "./components/pages/AboutUs";
 import ShoppingCart from "./components/pages/ShoppingCart";
 import OrdersManagment from "./components/pages/OrdersManagment";
-import ProductsCopy from "./components/pages/ProductsCopy";
+import ProductsCopy from "./components/pages/Products";
 import MyOrders from "./components/pages/MyOrders";
 
 const {always, authenticated, admin, noadmin, noauthenticated} = routesConfig;
@@ -81,15 +79,10 @@ const App: React.FC = () => {
     <Route path="/" element={<NavigatorDispatcher routes={routes}/>}>
         <Route index element={<Employees/>}/>
         <Route path="employees/add" element={<AddProduct/>}/>
-        {/* <Route path="statistics/age" element={<AgeStatistics/>}/>
-        <Route path="statistics/salary" 
-        element={<SalaryStatistics/>}/> */}
-        
         <Route path="signin" element={<SignIn/>}/>
         <Route path="signout" element={<SignOut/>}/>
-        {/* <Route path="generation" element={<Generation/>}/> */}
-        <Route path="products" element={<Products/>}/>
-        <Route path="productscopy" element={<ProductsCopy/>}/>
+        
+        <Route path="products" element={<ProductsCopy/>}/>
         <Route path="aboutus" element={<AboutUs/>}/>
         <Route path="cart" element={<ShoppingCart/>}/>
         <Route path="ordersmanagment" element={<OrdersManagment/>}/>

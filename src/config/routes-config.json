@@ -1,7 +1,7 @@
 {
     "always": [
-    {"to": "/products", "label": "Products","order":1},
-    {"to": "/productscopy", "label": "Products Copy","order":1}
+    
+    {"to": "/products", "label": "Products","order":1}
 ],
     "authenticated": [
     ],

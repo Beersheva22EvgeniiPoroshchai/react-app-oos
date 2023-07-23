@@ -31,7 +31,7 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 const defaultTheme = createTheme();
 const MyOders: React.FC = () => {
     
-    const goods = useSelectorProducts();
+   // const goods = useSelectorProducts();
     const orders = useSelectorOrders();
     const userData = useSelectorAuth();
 

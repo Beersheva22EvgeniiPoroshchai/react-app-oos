@@ -19,7 +19,7 @@ const AddProduct: React.FC = () => {
         } catch (error: any) {
            errorMessage = error;
         }
-        dispatch(errorMessage, successMessage);
+      //  dispatch(errorMessage, successMessage);
         return res;
     }
 

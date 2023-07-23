@@ -28,7 +28,7 @@ export const AddProductForm: React.FC<Props> = ({ submitFn, productUpdated }) =>
     const { minPrice, maxPrice, category } = productConfig;
 
     const [product, setProduct] = useState<Good>(productUpdated || initialProduct);
-   // const [errorMessage, setErrorMessage] = useState('');
+   //const [errorMessage, setErrorMessage] = useState('');
    // const [image, setImage] = useState<File>();
     const [filePath, setFilePath] = useState<any>(productUpdated?.image)
 
@@ -60,16 +60,7 @@ export const AddProductForm: React.FC<Props> = ({ submitFn, productUpdated }) =>
         setProduct(prodCopy);
     }
 
-    // async function handlerImage(event: any) {
-    //     const image = event.target.value;
 
-    //     const imgRefString = await productsService.uploadImage(new File(image, '11111'));
-
-    //     const prodCopy = { ...product };
-    //     prodCopy.image = imgRefString;
-    //     setProduct(prodCopy);
-        
-    // }
 
 
     const handleChangeImg = async (file: File | null) => {
@@ -110,14 +101,17 @@ export const AddProductForm: React.FC<Props> = ({ submitFn, productUpdated }) =>
         <form onSubmit={onSubmitFn} onReset={onResetFn}>
             <Grid container spacing={3} justifyContent="center">
 
+                
                 <Grid item xs={12} >
                     <Typography className="shopTitle"
                        
                         variant="h6"
                         component="div"
                         fontSize={25}
+                        
                     >
-                        Add Product form
+                        {productUpdated ? 'Update Product form' : 'Add Product form' }
+                        
                     </Typography>
                 </Grid>
 
